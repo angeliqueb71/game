@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="game_index.css">
+    <title>Game</title>
+  </head>
+  <body>
+    <h1>Go ask Jane</h1>
+    <h2>Here is how we play the Jane game</h2><br>
+    <h3>Read the question and choice your answer. <br><strong> YOUR PRIZE! Knowing your history</strong></h3>
+
+    <div class="size">
+
+    <p id="reset">
+      <!-- welcoming the contentant & Reset-->
+    <form name="form1">
+      Enter name:<input type="text" name="name"></input>
+      <input type="button" id="myReset" onclick="printvalue()" value="Click to start"></input>
+
+      <button onclick="myFunction()">Play again</button>
+      </p>
+    </form>
+    </p>
+
+    <br>
+    <!-- 1 Question/Buttons ********************-->
+    <p id="question1">1.Who was the first woman to run for president of the United States?</p>
+
+
+    <button type="myBtn" id="1-Btn">A: Victoria Woodhull</button>
+    <button type="button" id="choice-2">B: Hillary Clinton</button>
+    <button type="button" id="choice-3">C: Sally Ride</button>
+    <button onclick="hint()">Hint</button>
+
+    <br>
+
+
+   <!-- 2 Question/Buttons ********************-->
+      <p id="question2">2.Who was the first woman to command a U.S. Navy warship at sea</p>
+
+    <button type="button" id="answer-1">A: Regina Mills </button>
+    <button type="button" id="answer-2">B: Deborah Walsh </button>
+    <button type="button" id="myBtn-3">C: Kathleen A. McGrath </button>
+    <button onclick="hint2()">Hint</button>
+
+
+    <!-- Modal / Modal 1 *content**************** -->
+    <div id="myModal-1" class="modal">
+
+    <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>YOU ARE RIGHT!! <br>
+      Victoria Woodhull <br>
+      Year Ran: 1872 <br>634
+      Party: Equal Rights Party  -
+      Votes: No official votes recorded  -
+      Platform: Universal suffrage, political reform, civil rights and social</p>
+    </div>
+
+    </div>
+     <!-- Modal /  Modal 2 *content***************-->
+
+    <div id="myModal-2" class="modal">
+
+    <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>YOU ARE RIGHT!! <br>
+       Kathleen McGrath <br> Age: 50 <br>
+       Date:  Oct 3, 2002 - 1st Woman to Command a U.S. Navy Warship. Capt. Kathleen McGrath, who made history as the first woman to command a Navy warship, died of lung cancer Sept. 26 at the National Naval Medical Center in Bethesda, Md. She was 50.
+      </p>
+    </div>
+    </div>
+    </div>
+    <h2>Test your memory by matching pairs</h2>
+    <!-- game section ********************-->
+
+     <div id="memory_board"></div>
+
+     <!-- game section ^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+    <script type="text/javascript" src= "game_main.js"></script>
+    <script>newBoard();</script>
+
+  </body>
+</html>

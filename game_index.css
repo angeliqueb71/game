@@ -1,0 +1,88 @@
+body {
+  background-image: url(http://everywomanweekly.com/wp-content/uploads/2015/10/vagina-expired-go-ask-jane-featured.png);
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: cover;
+}
+
+.size {
+  font-size: 25px;
+  color: #0B2C0C;
+}
+button {
+  font-size: 18px;
+}
+input {
+  font-size: 20px;
+}
+
+#myReset {
+  font-size: 15px;
+  font-weight:bold;
+  height: 30px;
+  width: 150px;
+  background-color: yellow;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*game section*******************************************/
+
+/*#memory_board {
+  background: pink;
+  border: #999 1px solid;
+  width: 1000px;
+  height: 1000px;
+  padding: 24px;
+  margin: 0px auto;
+}*/
+
+#memory_board > div{
+
+	background: url(tile_bg.jpg) no-repeat;
+	border: red 1px solid;
+	width: 250px;
+	height: 71px;
+	float: left;
+	margin: 10px;
+	padding: 20px;
+	font-size: 20px;
+	cursor: pointer;
+	text-align: center;
+}
