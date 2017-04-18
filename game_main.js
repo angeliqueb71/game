@@ -1,3 +1,6 @@
+//will run when document is loaded
+document.addEventListener("DOMContentLoaded", function(){
+
 // Get the modal
 var modal = document.getElementById('myModal-1');
 
@@ -22,11 +25,9 @@ window.onclick = function() {
         modal.style.display = "none";
     }
 }
-
 // 2 modal*************************************
 
 var modal = document.getElementById('myModal-2');
-
 var btn = document.getElementById("myBtn-3");
 
 btn.onclick = function() {
@@ -74,10 +75,7 @@ function myFunction() {
   document.getElementById("button").innerHTML = x;
 }
 
-//^^^^^^^^^^^^^^^^^functions^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-//will run when document is loaded
-document.addEventListener("DOMContentLoaded", function(){
-
+//^^^^^^^^^^^^^^^^^functions^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   var firstBtn = document.querySelector("#myBtn-1")
   var secondChoice = document.querySelector("#choice-2")
   var thirdChoice = document.querySelector("#choice-3")
@@ -109,10 +107,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   })
 
-})
-
 // #2***************************************************************
-
 function alertFail() {
   alert("You are wrong try again")
 }
@@ -131,7 +126,7 @@ function hint2() {
     x.setAttribute("type", "button");
     x.setAttribute("value", "first woman to command a U.S. Navy warship at sea");
     document.body.appendChild(x);
-  }
+}
 
 //will run when document is loaded
 document.addEventListener("DOMContentLoaded", function(){
@@ -196,90 +191,68 @@ document.addEventListener("DOMContentLoaded", function(){
   //4 loop////looping all of the cards
   for(var i = 0; i < memory_array.length; i++){
   ///adding all of the div's
-  output += '<div id="tile_'+i+'" onclick="memoryFlipTile(this,\''+memory_array[i]+'\')"></div>';}
+    output += '<div id="tile_'+i+'" onclick="memoryFlipTile(this,\''+memory_array[i]+'\')"></div>'
   //^^^^^gives each div an id tile_= tile 1, stile 2 and so on ^^memoryFlipTile -responible for flip over & this. = represent the div
-
-  document.getElementById('memory_board').innerHTML = output;
-
+      document.getElementById('memory_board').innerHTML = output;
   }
+};
 
   function memoryFlipTile(tile,val){
 
-  if(tile.innerHTML == "" && memory_values.length < 2){
+    if(tile.innerHTML == "" && memory_values.length < 2){
 
-  tile.style.background = '#FFF';
+      tile.style.background = '#FFF';
 
-  tile.innerHTML = val;
+      tile.innerHTML = val;
 
-  if(memory_values.length == 0){
+    if(memory_values.length == 0){
 
-  memory_values.push(val);
+      memory_values.push(val);
 
-  memory_tile_ids.push(tile.id);
+      memory_tile_ids.push(tile.id);
 
-  } else if(memory_values.length == 1){
+    } else if(memory_values.length == 1){
 
-  memory_values.push(val);
+      memory_values.push(val);
 
-  memory_tile_ids.push(tile.id);
+      memory_tile_ids.push(tile.id);
 
-  if(memory_values[0] == memory_values[1]){
+        if(memory_values[0] == memory_values[1]){
 
-  tiles_flipped += 2;
+          tiles_flipped += 2;
 
   // Clear both arrays
 
-  memory_values = [];
-
+        memory_values = [];
       	memory_tile_ids = [];
-
   // Check to see if the whole board is cleared
-
-  if(tiles_flipped == memory_array.length){
-
-  	alert("GREAT JOB!!! YOU HAVE A GOOD MEMORY!!");
-
-  	 document.getElementById('memory_board').innerHTML = "";
-
-  	 newBoard();
-}
-
-  } else {
-
-  function flip2Back(){
-
+          if(tiles_flipped == memory_array.length){
+  	       alert("GREAT JOB!!! YOU HAVE A GOOD MEMORY!!");
+  	        document.getElementById('memory_board').innerHTML = "";
+  	         newBoard();
+        }
+       } else {
+            function flip2Back(){
     // Flip the 2 tiles back over
-
-    var tile_1 = document.getElementById(memory_tile_ids[0]);
-
-    var tile_2 = document.getElementById(memory_tile_ids[1]);
+              var tile_1 = document.getElementById(memory_tile_ids[0]);
+              var tile_2 = document.getElementById(memory_tile_ids[1]);
 
     // tile_1.style.background = 'url(tile_bg.jpg) no-repeat';
-
-    	    tile_1.innerHTML = "";
-
+    	          tile_1.innerHTML = "";
     // tile_2.style.background = 'url(tile_bg.jpg) no-repeat';
 
-    	    tile_2.innerHTML = "";
-
+    	          tile_2.innerHTML = "";
       // Clear both arrays
-
-      memory_values = [];
-
-      	    memory_tile_ids = [];
-
-  }
+                memory_values = [];
+                memory_tile_ids = [];
+           }
 
   setTimeout(flip2Back, 700);
-
+          }
+      }
    }
-
-   }
-
-  }
-
-}
-
+ }
+})
 
 
 // game ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
