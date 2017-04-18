@@ -52,6 +52,7 @@ function printvalue() {
 function alertFail() {
   alert("Wrong try again")
 }
+
 function alertSucess() {
   alert("You are RIGHT!!!")
 }
@@ -65,26 +66,22 @@ function hint() {
     x.setAttribute("type", "button");
     x.setAttribute("value", "Equal Rights Party");
     document.body.appendChild(x);
-  }
+}
 
   //reset game**********************************
-    function myFunction() {
-      var x = document.getElementById("myReset").value;
-      document.getElementById("button").innerHTML = x;
-  }
-
-
+function myFunction() {
+  var x = document.getElementById("myReset").value;
+  document.getElementById("button").innerHTML = x;
+}
 
 //^^^^^^^^^^^^^^^^^functions^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 //will run when document is loaded
 document.addEventListener("DOMContentLoaded", function(){
 
-
   var firstBtn = document.querySelector("#myBtn-1")
   var secondChoice = document.querySelector("#choice-2")
   var thirdChoice = document.querySelector("#choice-3")
   var answer = randomizer
-
 
   console.log(answer);
 
@@ -95,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function(){
       alertFail()
     }
   })
-
 
   secondChoice.addEventListener("click", function(event) {
     if(anwser =>2){
@@ -120,9 +116,11 @@ document.addEventListener("DOMContentLoaded", function(){
 function alertFail() {
   alert("You are wrong try again")
 }
+
 function alertSucess() {
   alert("You are RIGHT!!!")
 }
+
 //CHOOSES A RANDON # BTW 1 & 3
 function randomizer() {
   return Math.floor((Math.randon() * 3) + 1)
@@ -180,18 +178,18 @@ document.addEventListener("DOMContentLoaded", function(){
   var tiles_flipped = 0;
 
   Array.prototype.memory_tile_shuffle = function(){
-  var i = this.length, j, temp;
-  while(--i > 0){
-  j = Math.floor(Math.random() * (i+1));
-  temp = this[j];
-  this[j] = this[i];
-  this[i] = temp;
-  }
+   var i = this.length, j, temp;
+    while(--i > 0){
+    j = Math.floor(Math.random() * (i+1));
+    temp = this[j];
+    this[j] = this[i];
+    this[i] = temp;
+   }
   }
 
   function newBoard(){
-  tiles_flipped = 0;
-  var output = '';
+   tiles_flipped = 0;
+    var output = '';
 
 ///shuffle cards
   memory_array.memory_tile_shuffle();
@@ -241,11 +239,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
   	alert("GREAT JOB!!! YOU HAVE A GOOD MEMORY!!");
 
-  	document.getElementById('memory_board').innerHTML = "";
+  	 document.getElementById('memory_board').innerHTML = "";
 
-  	newBoard();
-
-  }
+  	 newBoard();
+}
 
   } else {
 
@@ -275,13 +272,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
   setTimeout(flip2Back, 700);
 
-  }
+   }
+
+   }
 
   }
 
-  }
-
-  }
+}
 
 
 
